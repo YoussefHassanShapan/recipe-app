@@ -9,7 +9,9 @@ import youssef.com.recipeapp.services.RecipeService;
 @Slf4j
 @Controller
 public class IndexController {
+
     private final RecipeService recipeService;
+
     public IndexController(RecipeService recipeService) {
         this.recipeService = recipeService;
     }
@@ -22,5 +24,4 @@ public class IndexController {
 
         return "index";
     }
-
 }

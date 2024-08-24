@@ -13,7 +13,6 @@ import youssef.com.recipeapp.repositories.UnitOfMeasureRepository;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @Component
@@ -156,16 +155,17 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     }
 
     private UnitOfMeasure getUnitOfMeasure(String description) {
-        return unitOfMeasureRepository.findByDescription(description) !=null ?
-                unitOfMeasureRepository.findByDescription(description) : null;
-                //.orElseThrow(() -> new RuntimeException("Expected UOM Not Found: " + description));
+        return unitOfMeasureRepository.findByDescription(description);
+//                !=null ?
+//                unitOfMeasureRepository.findByDescription(description) : null;
+        //.orElseThrow(() -> new RuntimeException("Expected UOM Not Found: " + description));
     }
 
     private Category getCategory(String description) {
-        return categoryRepository.findByDescription(description) !=null ?
-                categoryRepository.findByDescription(description) : null;
-             //   .orElseThrow(() -> new RuntimeException("Expected Category Not Found: " + description));
-        //System.out.println("Not found");
+        return categoryRepository.findByDescription(description);
+//                !=null ?
+//                categoryRepository.findByDescription(description) : null;
+           //.orElseThrow(() -> new RuntimeException("Expected Category Not Found: " + description));
     }
 
 }

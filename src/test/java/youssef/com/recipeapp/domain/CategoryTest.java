@@ -1,32 +1,34 @@
 package youssef.com.recipeapp.domain;
 
-import org.aspectj.lang.annotation.Before;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class CategoryTest {
+public class CategoryTest {
 
-    public static   Category category;
-    
-    @BeforeAll
-    public static void setUp(){
+    Category category;
+
+    @BeforeEach
+    public void setUp(){
         category = new Category();
     }
-    
+
     @Test
-    void getId() {
-        Long id = 4L;
-        category.setId(id);
-        assertEquals(id,category.getId());
+    public void getId() throws Exception {
+        Long idValue = 4L;
+
+        category.setId(idValue);
+
+        assertEquals(idValue, category.getId());
     }
 
     @Test
-    void getDescription() {
+    public void getDescription() throws Exception {
     }
 
     @Test
-    void getRecipes() {
+    public void getRecipes() throws Exception {
     }
+
 }
