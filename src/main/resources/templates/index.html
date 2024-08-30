@@ -23,7 +23,9 @@
 </head>
 <body>
 <!--/*@thymesVar id="recipes" type="java.util.List"*/-->
-<!--/*@thymesVar id="recipe" type="guru.springframework.domain.Recipe"*/-->
+<!--/*@thymesVar id="recipe" type="youssef.com.recipeapp.domain.Recipe"*/-->
+
+
 <div class="container-fluid" style="margin-top: 20px">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -41,7 +43,6 @@
                 <th>Description</th>
                 <th>View</th>
                 <th>Update</th>
-                <th>Delete</th>
               </tr>
               </thead>
               <tr th:remove="all">
@@ -68,6 +69,5 @@
     </div>
   </div>
 </div>
-
 </body>
 </html>
